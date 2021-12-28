@@ -1,0 +1,55 @@
+name:                heroku-haskell-mvp
+version:             0.1.0.0
+
+dependencies:
+- base >= 4.7 && < 5
+- text
+- containers
+- servant
+- servant-server
+- aeson
+- generic-aeson
+- wai
+- warp
+
+default-extensions:
+- OverloadedStrings
+
+ghc-options:
+  - -Wall
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+
+library:
+  source-dirs: src
+
+executables:
+  heroku-haskell-mvp-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - heroku-haskell-mvp
+
+tests:
+  heroku-haskell-mvp-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - heroku-haskell-mvp
+    - hspec
+    - hspec-discover
+    - QuickCheck
+    - hspec-wai
+    - hspec-wai-json
+
+verbatim:
+  cabal-version: 3.0
