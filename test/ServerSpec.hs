@@ -1,6 +1,6 @@
 module ServerSpec where
 
-import Lib (app)
+import Server (app)
 import Test.Hspec (Spec, describe, it, shouldBe)
 import Test.Hspec.QuickCheck (prop)
 import Test.Hspec.Wai (get, shouldRespondWith, with)
