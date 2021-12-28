@@ -2,7 +2,7 @@
 {-# LANGUAGE DeriveGeneric #-}
 {-# LANGUAGE TypeOperators #-}
 
-module Lib where
+module Server where
 
 import Data.Aeson (ToJSON)
 import Data.Data (Proxy (Proxy))
@@ -22,7 +22,7 @@ instance ToJSON StatusResponse
 
 type StatusEndpoint = "status" :> Get '[JSON] StatusResponse
 
-type API = StatusEndpoint 
+type API = StatusEndpoint
 
 api :: Proxy API
 api = Proxy
@@ -34,5 +34,6 @@ startServer :: IO ()
 startServer = run 8080 app
 
 server :: Server API
-server = pure ok where 
-   ok = StatusResponse "ok"
+server = pure ok
+  where
+    ok = StatusResponse "ok"

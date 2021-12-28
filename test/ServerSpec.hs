@@ -1,4 +1,4 @@
-module LibSpec where
+module ServerSpec where
 
 import Lib (app)
 import Test.Hspec (Spec, describe, it, shouldBe)
