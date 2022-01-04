@@ -63,9 +63,9 @@ jobs:
       uses: akhileshns/heroku-deploy@v3.12.12
       with:
         heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-        heroku_app_name: "alessandrocandolini-heroku-haskell-mvp"
+        heroku_app_name: "ac-heroku-haskell-mvp"
         heroku_email: "alessandro.candolini@gmail.com"
         usedocker: true
-        healthcheck: "https://alessandrocandolini-heroku-haskell-mvp.herokuapp.com/status"
+        healthcheck: "https://ac-heroku-haskell-mvp.herokuapp.com/status"
         delay: 5
         rollbackonhealthcheckfailed: true
