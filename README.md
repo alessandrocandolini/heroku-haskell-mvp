@@ -1,5 +1,7 @@
 # heroku-haskell-mvp
 
+[![CI](https://github.com/alessandrocandolini/heroku-haskell-mvp/actions/workflows/ci.yml/badge.svg)](https://github.com/alessandrocandolini/heroku-haskell-mvp/actions/workflows/ci.yml) [![codecov](https://codecov.io/gh/alessandrocandolini/heroku-haskell-mvp/branch/main/graph/badge.svg?token=JFTWHU7AQE)](https://codecov.io/gh/alessandrocandolini/heroku-haskell-mvp)
+
 ## How to build and run locally
 
 The project uses the [Haskell tool stack](https://docs.haskellstack.org/en/stable/README/).
