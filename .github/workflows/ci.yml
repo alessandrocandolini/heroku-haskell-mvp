@@ -57,3 +57,15 @@ jobs:
         files: ./codecov.json
         fail_ci_if_error: false # optional (default = false)
         verbose: true
+
+    - name: Deploy
+      if: github.ref == 'refs/heads/main'
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "alessandrocandolini-heroku-haskell-mvp"
+        heroku_email: "alessandro.candolini@gmail.com"
+        usedocker: true
+        healthcheck: "https://alessandrocandolini-heroku-haskell-mvp.herokuapp.com/status"
+        delay: 5
+        rollbackonhealthcheckfailed: true
