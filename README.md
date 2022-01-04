@@ -26,6 +26,11 @@ To run the executable,
 ```
 stack exec heroku-haskell-mvp-exe
 ```
+If `curl` is available on the machine, the server can be reached using 
+```
+curl http://localhost:8080/status
+```
+
 For faster feedback loop,
 ```
 stack test --fast --file-watch
