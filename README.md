@@ -16,11 +16,17 @@ which is equivalent to
 ```
 stack build --test
 ```
+To run tests with coverage
+```
+stack test --coverage
+```
+which produces textual and html reports.
+
 To run the executable,
 ```
 stack exec heroku-haskell-mvp-exe
 ```
-For a faster feedback loop,
+For faster feedback loop,
 ```
 stack test --fast --file-watch
 ```
