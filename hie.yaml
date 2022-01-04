@@ -6,9 +6,6 @@ cradle:
     - path: "./app/Main.hs"
       component: "heroku-haskell-mvp:exe:heroku-haskell-mvp-exe"
 
-    - path: "./app/Paths_haskell_toy_example.hs"
-      component: "heroku-haskell-mvp:exe:heroku-haskell-mvp-exe"
-
     - path: "./test"
       component: "heroku-haskell-mvp:test:heroku-haskell-mvp-test"
 
